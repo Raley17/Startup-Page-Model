@@ -5,7 +5,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="./public/assets/img/compass-solid-full.svg"
+      href="./assets/img/compass-solid-full.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,7 @@
             architecto accusamus beatae.
           </p>
           <div class="botones">
-            <button class="boton transparente">
+            <button class="boton transparente" id="btn-video">
               Ver demo
               <div class="icono">
                 <svg
@@ -138,13 +138,13 @@
         </div>
 
         <div class="col-2">
-          <div class="slideshow">
-            <div class="slides">
+          <div class="slideshow" id="slideshow">
+            <div class="slides" id="slides">
               <div class="slide"><img src="./assets/img/1.png" alt="" /></div>
               <div class="slide"><img src="/assets/img/2.png" alt="" /></div>
               <div class="slide"><img src="/assets/img/3.png" alt="" /></div>
             </div>
-            <div class="indicadores">
+            <div class="indicadores" id="indicadores">
               <button class="indicador active"></button>
               <button class="indicador"></button>
               <button class="indicador"></button>
@@ -152,7 +152,7 @@
           </div>
         </div>
 
-        <div class="overlay-video">
+        <div class="overlay-video" id="overlay-video">
           <div class="video">
             <iframe
               src="https://www.youtube.com/embed/geyULKvlD1I?si=wkuhV13044x6ATJf"
@@ -181,14 +181,19 @@
         <section class="caracteristicas">
           <h2 class="titulo">Caracteristicas</h2>
           <div class="grid">
-            <div class="previews">
-              <img class="thumb active" src="./assets/img/5.png" alt="" />
-              <img class="thumb" src="./assets/img/6.png" alt="" />
-              <img class="thumb" src="./assets/img/4.png" alt="" />
-              <img class="thumb" src="./assets/img/7.png" alt="" />
+            <div class="previews" id="previews">
+              <img
+                class="thumb active"
+                src="./assets/img/5.png"
+                alt=""
+                data-id="1"
+              />
+              <img class="thumb" src="./assets/img/6.png" alt="" data-id="2" />
+              <img class="thumb" src="./assets/img/4.png" alt="" data-id="3" />
+              <img class="thumb" src="./assets/img/7.png" alt="" data-id="4" />
             </div>
-            <div class="tabs">
-              <div class="tab active">
+            <div class="tabs" id="tabs">
+              <div class="tab active" data-id="1">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +218,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="2">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +243,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="3">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +268,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="4">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
